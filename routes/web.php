@@ -14,9 +14,17 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
  Route::resource('/client','ClientController');
+
+ route::get('/abailroom/{id}','RoomnewController@abailRoom')->name('abailroom');
+ route::get('/bookroom/{id}/{id2}','RoomnewController@bookRoom')->name('bookroom');
+
+ route::get('/bookroom/{id}/{id2}','RoomnewController@bookRoom')->name('bookroom');
+ route::get('/reservation','RoomnewController@AllReservedCustomer')->name('reservation');
+
+
 
 Route::get('/clients', function () {
     return view('clients');

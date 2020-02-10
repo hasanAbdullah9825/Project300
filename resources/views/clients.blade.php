@@ -1,5 +1,4 @@
-
-      @extends('layout')   
+@extends('layout')   
     @section('content')
 
 
@@ -29,7 +28,7 @@
                 <td>
                   
                 <a class="hollow button"  href="{{route('client.edit',['id'=>$client->id])}}">EDIT</a>
-                  <a class="hollow button warning" href="{{ route('clients') }}">BOOK A ROOM</a>
+                  <a class="hollow button warning" href="{{route ('abailroom',['id'=>$client->id])}}">BOOK A ROOM</a>
                 </td>
               </tr>
 
@@ -42,5 +41,3 @@
       </div>
     </div>
     @endsection('content')
-
-    

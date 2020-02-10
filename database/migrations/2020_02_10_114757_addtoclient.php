@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddToClients extends Migration
+class Addtoclient extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,6 @@ class AddToClients extends Migration
     public function up()
     {
         Schema::table('clients', function (Blueprint $table) {
-            
             $table->string('title');
             $table->string('name');
             $table->string('lastname');
@@ -23,6 +22,7 @@ class AddToClients extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('email');
+            $table->integer('roomNo');
         });
     }
 
@@ -34,8 +34,7 @@ class AddToClients extends Migration
     public function down()
     {
         Schema::table('clients', function (Blueprint $table) {
-            $table->dropColumn(['title','name','lastname','address','city','state','email']);
-            
+            $table->dropColumn(['title','name','lastname','address','city','state','email','roomNo']);
         });
     }
 }

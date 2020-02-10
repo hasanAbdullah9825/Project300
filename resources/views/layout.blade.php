@@ -18,7 +18,7 @@
           <ul class="dropdown menu" data-dropdown-menu="49qhhm-dropdown-menu" role="menubar">
             <li role="menuitem"><a href="/">Home</a></li>
             <li role="menuitem"><a href="{{ route('client.index') }}">Clients</a></li>
-            <li role="menuitem"><a href="./reservations.html">Reservations</a></li>
+            <li role="menuitem"><a href="{{ route('reservation') }}">Reservations</a></li>
           </ul>
         </div>
       </div>

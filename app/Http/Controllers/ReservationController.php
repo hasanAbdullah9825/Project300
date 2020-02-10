@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\client;
 
-class clientController extends Controller
+class ReservationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class clientController extends Controller
      */
     public function index()
     {
-        return view('clients',['Clients'=>client::all()]);
+        //
     }
 
     /**
@@ -35,18 +34,7 @@ class clientController extends Controller
      */
     public function store(Request $request)
     {
-
-$client=new client();
-$client->title=$request->input('title');
-$client->name=$request->input('name');
-$client->lastname=$request->input('lastName');
-$client->address=$request->input('address');
-$client->city=$request->input('city');
-$client->state=$request->input('state');
-$client->email=$request->input('email');
-$client->save();
-return redirect()->route('client.index');
-
+        //
     }
 
     /**
@@ -68,7 +56,7 @@ return redirect()->route('client.index');
      */
     public function edit($id)
     {
-        return view('edit',['client'=>client::findOrFail($id)]);
+        //
     }
 
     /**
@@ -80,16 +68,7 @@ return redirect()->route('client.index');
      */
     public function update(Request $request, $id)
     {
-$client=client::findOrFail($id);
-$client->title=$request->input('title');
-$client->name=$request->input('name');
-$client->lastname=$request->input('lastName');
-$client->address=$request->input('address');
-$client->city=$request->input('city');
-$client->state=$request->input('state');
-$client->email=$request->input('email');
-$client->save();
-return redirect()->route('client.index');
+        //
     }
 
     /**

@@ -1,6 +1,4 @@
-
-
-    @extends('layout')   
+@extends('layout')   
     @section('content')
 
 
@@ -22,5 +20,3 @@
     </div>
 
     @endsection('content')
-    
-   
