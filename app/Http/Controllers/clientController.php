@@ -13,8 +13,11 @@ class clientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('clients',['Clients'=>client::all()]);
+    {  $cl= client::where('recentCondition','0')->get();
+        //dd($cl);
+        
+        //return view('clients',['Clients'=>client::all()]);
+       return view('clients',['Clients'=>$cl]);
     }
 
     /**
@@ -42,8 +45,11 @@ $client->name=$request->input('name');
 $client->lastname=$request->input('lastName');
 $client->address=$request->input('address');
 $client->city=$request->input('city');
-$client->state=$request->input('state');
+
 $client->email=$request->input('email');
+$d=date('Y-m-d');
+
+$client->date=$d;
 $client->save();
 return redirect()->route('client.index');
 
@@ -86,8 +92,9 @@ $client->name=$request->input('name');
 $client->lastname=$request->input('lastName');
 $client->address=$request->input('address');
 $client->city=$request->input('city');
-$client->state=$request->input('state');
+
 $client->email=$request->input('email');
+
 $client->save();
 return redirect()->route('client.index');
     }

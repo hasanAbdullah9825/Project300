@@ -16,7 +16,8 @@ class Addtorooms extends Migration
         Schema::table('rooms', function (Blueprint $table) {
             $table->integer('roomNo');
             $table->integer('bookingState');
-            $table->string('email');
+            $table->integer('price');
+            
         });
     }
 
@@ -28,7 +29,7 @@ class Addtorooms extends Migration
     public function down()
     {
         Schema::table('rooms', function (Blueprint $table) {
-            $table->dropColumn(['roomNo','bookingState','email']);
+            $table->dropColumn(['roomNo','bookingState','price']);
             
         });
     }

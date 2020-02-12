@@ -20,9 +20,13 @@ class Addtoclient extends Migration
             $table->text('address');
             
             $table->string('city');
-            $table->string('state');
+            // $table->string('state');
             $table->string('email');
-            $table->integer('roomNo');
+            $table->integer('roomNo')->nullable($value=true);
+            $table->date('date');
+            $table->date('ldate')->nullable($value=true);
+            $table->integer('recentCondition')->default(0);
+
         });
     }
 
@@ -34,7 +38,7 @@ class Addtoclient extends Migration
     public function down()
     {
         Schema::table('clients', function (Blueprint $table) {
-            $table->dropColumn(['title','name','lastname','address','city','state','email','roomNo']);
+            $table->dropColumn(['title','name','lastname','address','city','email','roomNo','date','ldate','recentCondition']);
         });
     }
 }

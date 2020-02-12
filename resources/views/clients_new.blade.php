@@ -35,12 +35,9 @@
             <label>City</label>
             <input name="city" type="text" value="{{old('city',$client->city??null)}}">
           </div>
-          <div class="medium-4  columns">
-            <label>State</label>
-            <input name="state" type="text" value="{{old('state',$client->state??null)}}">
-          </div>
+          
           <div class="medium-12  columns">
-            <label>Email</label>
+            <label>Phone</label>
             <input name="email" type="text" value="{{old('email',$client->email??null)}}">
           </div>
           <div class="medium-12  columns">

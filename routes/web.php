@@ -18,11 +18,14 @@ Route::get('/', function () {
 
  Route::resource('/client','ClientController');
 
- route::get('/abailroom/{id}','RoomnewController@abailRoom')->name('abailroom');
- route::get('/bookroom/{id}/{id2}','RoomnewController@bookRoom')->name('bookroom');
+  route::get('/abailroom/{id}','RoomnewController@abailRoom')->name('abailroom');
+  route::get('/bookroom/{id}/{id2}','RoomnewController@bookRoom')->name('bookroom');
 
  route::get('/bookroom/{id}/{id2}','RoomnewController@bookRoom')->name('bookroom');
- route::get('/reservation','RoomnewController@AllReservedCustomer')->name('reservation');
+  route::get('/reservation','RoomnewController@AllReservedCustomer')->name('reservation');
+ route::get('/destroy/{id}/{clientid}','RoomnewController@destroyClient')->name('destroy');
+
+
 
 
 

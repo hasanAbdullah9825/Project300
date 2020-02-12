@@ -13,9 +13,9 @@
         <table class="stack">
           <thead>
             <tr>
-              <th width="200">Name</th>
-              <th width="200">Email</th>
-              <th width="200">Action</th>
+              <th width="100">Name</th>
+              <th width="100">Email</th>
+              <th width="100">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -29,6 +29,7 @@
                   
                 <a class="hollow button"  href="{{route('client.edit',['id'=>$client->id])}}">EDIT</a>
                   <a class="hollow button warning" href="{{route ('abailroom',['id'=>$client->id])}}">BOOK A ROOM</a>
+                  <a  class="hollow button" href="{{route('destroy',['roomno'=>$client->roomNo,'clientId'=>$client->id])}}">Leave Room</a>
                 </td>
               </tr>
 

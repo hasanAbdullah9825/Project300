@@ -36,5 +36,21 @@ class RoomnewController extends Controller
 
     }
 
+    public function destroyClient ($roomId,$clientId){
+      $room=room::findOrFail($roomId);
+       $room->bookingState=0;
+       $room->save();
+
+         $client=client::findOrFail($clientId);
+         $d=date('Y-m-d');
+         $client->ldate=$d;
+         $client->recentCondition=1;
+         $client->save();
+       
+        return redirect()->route('client.index');
+     
+    }
+    
+
 
 }
